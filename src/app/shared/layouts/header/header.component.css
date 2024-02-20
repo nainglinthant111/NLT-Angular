@@ -1,0 +1,14 @@
+a{
+   color:aliceblue; 
+}
+
+a:hover{
+    color:blue;
+}
+.dropdown-menu{
+    background-color: rgb(16, 16, 17);
+}
+
+.humbuger{
+    border-color: aliceblue;
+}
