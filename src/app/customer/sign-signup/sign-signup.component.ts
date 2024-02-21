@@ -9,13 +9,13 @@ import { LoginSignupService } from '../../shared/services/login-signup.service';
 @Component({
   selector: 'app-sign-signup',
   standalone: true,
-  imports: [CommonModule, RouterLink,HttpClientModule,FormsModule,ReactiveFormsModule],
+  imports: [CommonModule, RouterLink, HttpClientModule, FormsModule, ReactiveFormsModule],
   templateUrl: './sign-signup.component.html',
   styleUrl: './sign-signup.component.css'
 })
 export class SignSignupComponent {
   regForm: boolean = false;
-  loginForm:boolean=false;
+  loginForm: boolean = false;
   signUpForm!: FormGroup;
   signInForm!: FormGroup;
   signUpsubmitted = false;
@@ -31,10 +31,10 @@ export class SignSignupComponent {
     this.href = this.router.url;
     if (this.href == '/sign-up') {
       this.regForm = true;
-      this.loginForm=false;
+      this.loginForm = false;
     } else if (this.href == '/sign-in') {
       this.regForm = false;
-      this.loginForm=true;
+      this.loginForm = true;
     }
     this.signUpForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -61,6 +61,7 @@ export class SignSignupComponent {
     return this.signUpForm.controls;
   }
   onSubmitSignUp() {
+
     this.signUpsubmitted = true;
     this.user_reg_data = this.signUpForm.value;
     this.user_dto = {
@@ -85,24 +86,30 @@ export class SignSignupComponent {
       uploadPhoto: this.user_reg_data.uploadPhoto,
       role: this.user_reg_data.role
     }
-    this.loginService.userRegister(this.user_dto).subscribe(data=>{
-      alert("User Register Successfull!");
-      this.router.navigateByUrl('/sign-in');
-    });
+    console.log(this.signUpForm);
+    
+    if (this.signUpForm) {
+      this.loginService.userRegister(this.user_dto).subscribe(data => {
+        alert("User Register Successfull!");
+        this.router.navigateByUrl('/sign-in');
+      });
+    } else {
+      alert("Require!");
+    }
   }
   onSubmitSignIn() {
     console.log("Form values:", this.signInFormValue); // Check form values
-    
+
     this.loginService.authLogin(this.signInFormValue.email, this.signInFormValue.password)
       .subscribe(
         (data: string | any[]) => {
           console.log("Response data:", data); // Check response data
-          
+
           if (data.length === 1) {
             const user = data[0];
             sessionStorage.setItem("user_session_id", user.id);
             sessionStorage.setItem("role", user.role);
-            
+
             if (user.role === "seller" || user.role === "buyer") {
               this.router.navigateByUrl('/seller-dashboard'); // Navigate to appropriate dashboard
             } else {
@@ -117,5 +124,5 @@ export class SignSignupComponent {
         }
       );
   }
-  
+
 }
