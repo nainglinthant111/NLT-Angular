@@ -9,6 +9,7 @@ import { SignSignupComponent } from './customer/sign-signup/sign-signup.componen
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './shared/layouts/page-not-found/page-not-found.component';
+import { AdminAuthGuardLogin, AdminAuthGuardService, BuyerAuthGuardService, SelleBuyerAruthGuardLogin, SellerAuthGuardService } from './shared/services/auth-guard.service';
 import { UserCrudComponent } from './user-crud/user-crud.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
@@ -19,31 +20,31 @@ export const routes: Routes = [
     { path: "contact-us", component: ContactUsComponent },
     //admin
     {
-        path: '', children: [
+        path: '',canActivate:[AdminAuthGuardLogin], children: [
             { path: "admin-login", component: AdminLoginComponent }
         ]
     },
     {
-        path: '', children: [
+        path: '',canActivate:[AdminAuthGuardService], children: [
             { path: "admin-dashboard", component: AdminDashboardComponent },
             { path: "admin/user", component: UserCrudComponent },
             { path: "admin/product", component: ProductComponent }
         ]
     },
     {
-        path: '', children: [
+        path: '',canActivate:[SelleBuyerAruthGuardLogin], children: [
             { path: "sign-in", component: SignSignupComponent },
             { path: "sing-up", component: SignSignupComponent }
         ]
     },
     {
-        path: '', children: [
+        path: '',canActivate:[SellerAuthGuardService], children: [
             { path: "seller-dashboard", component: SellerDashboardComponent },
             { path: "seller/product", component: ProductComponent }
         ]
     },
     {
-        path: '', children: [
+        path: '',canActivate:[BuyerAuthGuardService], children: [
             { path: "buyer-dashboard", component: BuyerDashboardComponent },
             { path: "checkout", component: CheckoutComponent }
         ]

@@ -11,15 +11,15 @@ export class LoginSignupService {
     public common_url="http://localhost:3000"
   apiService: any;
   constructor(private http:HttpClient,private api:ApiService) { }
+  //User Login
   authLogin(user_name:any,password: any):Observable<any>{
     return this.api.get(this.common_url+"/user?email="+user_name+"&password="+password);
   }
-  // userRegister(user_dto: any):Observable<any>{
-  //   return this.api.post(this.reg_url+"/user",user_dto)
-  // }
+  //create New User
   userRegister(user_dto: User): Observable<User> {
     return this.http.post<User>(this.common_url + "/user", user_dto);
   }
+  //User Login by role
   adminLogin(user_name:any,password:any):Observable<any>{
     return this.api.get(this.common_url+"/user?email="+user_name+"&password="+password+"&role=admin");
   }

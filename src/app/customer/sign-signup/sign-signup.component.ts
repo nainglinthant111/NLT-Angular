@@ -62,9 +62,6 @@ export class SignSignupComponent {
   }
   onSubmitSignUp() {
     this.signUpsubmitted = true;
-    // if (this.signUpForm.invalid) {
-    //   return;
-    // }
     this.user_reg_data = this.signUpForm.value;
     this.user_dto = {
       aboutYou: this.user_reg_data.aboutYou,
@@ -88,11 +85,8 @@ export class SignSignupComponent {
       uploadPhoto: this.user_reg_data.uploadPhoto,
       role: this.user_reg_data.role
     }
-    console.log(this.user_dto);
-    
-
     this.loginService.userRegister(this.user_dto).subscribe(data=>{
-      alert("User Register Successfull 0");
+      alert("User Register Successfull!");
       this.router.navigateByUrl('/sign-in');
     });
   }

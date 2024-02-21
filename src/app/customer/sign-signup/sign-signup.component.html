@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
+      <!-- Register Form -->
       <div class="col-md-6 offset-md-3" *ngIf="!loginForm">
         <h3>Registration -Angular 17 Reactive Forms with validation </h3>
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()">
@@ -112,7 +113,7 @@
             </button>
           </div>
         </form>
-        <p class="sim-pointer" routerLink="/sign-in">Alreadhy have an account Click here to login.</p>
+        <p class="sim-pointer" routerLink="/sign-in">Alreadhy have an account Click here to login!</p>
       </div>
 
       <!-- Login Form -->
@@ -133,7 +134,7 @@
             <button class="btn btn-primary my-3">Log In</button>
           </div>
         </form>
-        <p class="sim-pointer" routerLink="/sing-up">Don't have an account Click here to Register.</p>
+        <p class="sim-pointer" routerLink="/sing-up">Don't have an account Click here to Register!</p>
       </div>
     </div>
   </div>

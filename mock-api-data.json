@@ -24,10 +24,10 @@
       "uploadPhoto": "ashish.png",
       "agreetc": true,
       "role": "seller",
-      "id": 1
+      "id": "1"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Phoo Phoo",
       "mobNumber": "12345678909",
       "age": "25",
@@ -70,6 +70,28 @@
       "name": "Kim Soo Hyun",
       "password": "1996junesix",
       "uploadPhoto": "C:\\fakepath\\images (1).jpg",
+      "role": "seller"
+    },
+    {
+      "id": "818b",
+      "aboutYou": "nani",
+      "age": 24,
+      "agreetc": true,
+      "dob": "2024-02-21",
+      "email": "oppositedirection111@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "Yangon",
+        "addLine2": "sd",
+        "state": "Choose...",
+        "zipCode": ""
+      },
+      "language": "2",
+      "mobNumber": "09750244049",
+      "name": "Myat Kaung Khant",
+      "password": "12345678",
+      "uploadPhoto": "C:\\fakepath\\images.jpg",
       "role": "seller"
     }
   ],
