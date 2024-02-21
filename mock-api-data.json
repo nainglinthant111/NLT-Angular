@@ -23,7 +23,7 @@
       "aboutYou": "I am a programmer...",
       "uploadPhoto": "ashish.png",
       "agreetc": true,
-      "role": "seller",
+      "role": "admin",
       "id": "1"
     },
     {
@@ -56,7 +56,7 @@
       "age": 42,
       "agreetc": true,
       "dob": "1824-02-01",
-      "email": "ksh@gmail.com",
+      "email": "seller@gmail.com",
       "gender": "Male",
       "address": {
         "id": 0,
@@ -68,7 +68,7 @@
       "language": "1 ",
       "mobNumber": "09-123456789",
       "name": "Kim Soo Hyun",
-      "password": "1996junesix",
+      "password": "12345678",
       "uploadPhoto": "C:\\fakepath\\images (1).jpg",
       "role": "seller"
     },
@@ -78,7 +78,7 @@
       "age": 24,
       "agreetc": true,
       "dob": "2024-02-21",
-      "email": "oppositedirection111@gmail.com",
+      "email": "buyer@gmail.com",
       "gender": "Male",
       "address": {
         "id": 0,
@@ -92,29 +92,7 @@
       "name": "Myat Kaung Khant",
       "password": "12345678",
       "uploadPhoto": "C:\\fakepath\\images.jpg",
-      "role": "seller"
-    },
-    {
-      "id": "2ad7",
-      "aboutYou": "",
-      "age": "",
-      "agreetc": "",
-      "dob": "",
-      "email": "",
-      "gender": "",
-      "address": {
-        "id": 0,
-        "addLine1": "",
-        "addLine2": "",
-        "state": "",
-        "zipCode": ""
-      },
-      "language": "",
-      "mobNumber": "",
-      "name": "",
-      "password": "",
-      "uploadPhoto": "",
-      "role": ""
+      "role": "buyer"
     }
   ],
   "products": [

@@ -85,9 +85,7 @@ export class SignSignupComponent {
       password: this.user_reg_data.password,
       uploadPhoto: this.user_reg_data.uploadPhoto,
       role: this.user_reg_data.role
-    }
-    console.log(this.signUpForm);
-    
+    }    
     if (this.signUpForm) {
       this.loginService.userRegister(this.user_dto).subscribe(data => {
         alert("User Register Successfull!");
@@ -103,16 +101,16 @@ export class SignSignupComponent {
     this.loginService.authLogin(this.signInFormValue.email, this.signInFormValue.password)
       .subscribe(
         (data: string | any[]) => {
-          console.log("Response data:", data); // Check response data
-
           if (data.length === 1) {
             const user = data[0];
             sessionStorage.setItem("user_session_id", user.id);
             sessionStorage.setItem("role", user.role);
 
-            if (user.role === "seller" || user.role === "buyer") {
+            if (user.role === "seller") {
               this.router.navigateByUrl('/seller-dashboard'); // Navigate to appropriate dashboard
-            } else {
+            }else if(user.role === "buyer"){
+              this.router.navigateByUrl('/buyer-dashboard');
+            }else {
               alert("Invalid role!");
             }
           } else {
