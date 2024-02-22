@@ -1,9 +1,36 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ApiService } from '../../core/service/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
+  public common_url="http://localhost:3000";
+  constructor(private apiService:ApiService) { }
 
-  constructor() { }
+  userDashboardData(){
+    return this.apiService.get(this.common_url+"/user/")
+  }
+
+  productDashboardData(){
+    return this.apiService.get(this.common_url+"/products")
+  }
+  allUser():Observable<any>{
+    return this.apiService.get(this.common_url+"/user")
+  }
+  addUser(user_dto:any){
+    return this.apiService.post(this.common_url+"/user",user_dto);
+  }
+  //get data of individual user
+  singleuUser(user_id:any){
+    return this.apiService.get(this.common_url+"/user/",user_id);
+  }
+  //update data of individual user
+  editUser(user_id:any,user_dto:any):Observable<any>{
+    return this.apiService.put(this.common_url+"/user/"+user_id,user_dto);
+  }
+  deleteUser(user_id:any){
+    return this.apiService.delete(this.common_url+"/user/"+user_id);
+  }
 }

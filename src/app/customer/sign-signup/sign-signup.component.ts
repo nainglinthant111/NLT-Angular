@@ -44,7 +44,7 @@ export class SignSignupComponent {
       email: ['', Validators.required],
       password: ['', Validators.required],
       addLine1: ['', Validators.required],
-      addLine2: ['', Validators.required],
+      addLine2: [],
       city: ['', Validators.required],
       state: ['', Validators.required],
       zipCode: ['', Validators.required],
