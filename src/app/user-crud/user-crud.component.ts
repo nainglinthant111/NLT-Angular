@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminService } from '../admin/services/admin.service';
 import { User } from '../core/Model/object-model';
-declare var JQuery:any;
+declare var jQuery:any;
 @Component({
   selector: 'app-user-crud',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule,ReactiveFormsModule],
   templateUrl: './user-crud.component.html',
   styleUrl: './user-crud.component.css'
 })
@@ -85,7 +85,7 @@ export class UserCrudComponent implements OnInit {
         id: 0,
         addLine1: this.user_reg_data.addLine1,
         addLine2: this.user_reg_data.addLine2,
-        city: this.user_reg_data.ciry,
+        city: this.user_reg_data.city,
         state: this.user_reg_data.state,
         zipCode: this.user_reg_data.zipCode,
       },
@@ -98,7 +98,9 @@ export class UserCrudComponent implements OnInit {
     }
     this.adminService.addUser(this.user_dto).subscribe(data=>{
       this.getAllUser();
-      JQuery('#addEditUserModel').model("toggle");
+      jQuery('#addEditUserModal').modal('toggle');
+      console.log("this is ok");
+      
     },error=>{
       console.log("My worng",error);
       
@@ -114,17 +116,18 @@ export class UserCrudComponent implements OnInit {
       this.upload_file_name=this.single_user_data.uploadPhoto;
       this.addEditUserForm.setValue({
         name:this.single_user_data.name,
-        mobileNumber:this.single_user_data.mobileNumber,
+        mobNumber:this.single_user_data.mobNumber,
         age:this.single_user_data.age,
         dob:this.single_user_data.dob,
         email:this.single_user_data.email,
         password:this.single_user_data.password,
         language:this.single_user_data.language,
         gender:this.single_user_data.gender,
-        addLine1:this.single_user_data.addLine1,
-        addLine2:this.single_user_data.addLine2,
-        zipCode:this.single_user_data.zipCode,
-        state:this.single_user_data.state,
+        addLine1:this.single_user_data.address.addLine1,
+        addLine2:this.single_user_data.address.addLine2,
+        zipCode:this.single_user_data.address.zipCode,
+        state:this.single_user_data.address.state,
+        city:this.single_user_data.address.city,
         aboutYou:this.single_user_data.aboutYou,
         uploadPhoto:"",
         agreetc:this.single_user_data.agreetc,
@@ -153,7 +156,7 @@ export class UserCrudComponent implements OnInit {
         id: 0,
         addLine1: this.user_reg_data.addLine1,
         addLine2: this.user_reg_data.addLine2,
-        city: this.user_reg_data.ciry,
+        city: this.user_reg_data.city,
         state: this.user_reg_data.state,
         zipCode: this.user_reg_data.zipCode,
       },
@@ -166,10 +169,9 @@ export class UserCrudComponent implements OnInit {
     }
     this.adminService.editUser(this.edit_user_id, this.user_dto).subscribe(data=>{
       this.getAllUser();
-      JQuery('#addEditUserModel').model("toggle");
+      jQuery('#addEditUserModal').modal("toggle");
     },error=>{
-      console.log("My worng",error);
-      
+      console.log("My worng",error); 
     });
   }
   deleteUser(user_id:any){

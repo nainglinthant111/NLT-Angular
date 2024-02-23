@@ -1,0 +1,13 @@
+.sim-pointer{
+    color:rgb(36, 17, 249);
+    cursor:pointer;
+}
+.colse-btn{
+    width:30px;
+    height:30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.model-body{
+    overflow: scroll;
+}

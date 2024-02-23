@@ -75,7 +75,7 @@ export class SignSignupComponent {
         id: 0,
         addLine1: this.user_reg_data.addLine1,
         addLine2: this.user_reg_data.addLine2,
-        city: this.user_reg_data.ciry,
+        city: this.user_reg_data.city,
         state: this.user_reg_data.state,
         zipCode: this.user_reg_data.zipCode,
       },

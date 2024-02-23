@@ -1,97 +1,118 @@
 {
   "user": [
     {
-      "name": "Naing Lin Thant",
-      "mobNumber": "12345678909",
-      "age": "29",
-      "dob": "5-6-1998",
-      "email": "admin@gmail.com",
-      "password": "12345678",
-      "address": {
-        "addLine1": "District Center",
-        "addLine2": "Jakata",
-        "city": "New York",
-        "state": "Kachin",
-        "zipCode": "110052"
-      },
-      "language": [
-        "English",
-        "Burmese",
-        "japanese"
-      ],
-      "gender": "Male",
-      "aboutYou": "I am a programmer...",
-      "uploadPhoto": "ashish.png",
+      "aboutYou": "Odio enim possimus ",
+      "age": 55,
       "agreetc": true,
-      "role": "admin",
-      "id": "1"
-    },
-    {
-      "id": "1",
-      "name": "Phoo Phoo",
-      "mobNumber": "12345678909",
-      "age": "25",
-      "dob": "5-6-1998",
-      "email": "scdf@gmail.com",
-      "password": "12345678",
-      "address": {
-        "addLine1": "District Center",
-        "addLine2": "Jakata",
-        "city": "New York",
-        "state": "Kachin",
-        "zipCode": "110053"
-      },
-      "language": [
-        "English"
-      ],
-      "gender": "Male",
-      "aboutYou": "I am a programmer...",
-      "uploadPhoto": "ashish.png",
-      "agreetc": true,
-      "role": "seller"
-    },
-    {
-      "id": "8fa9",
-      "aboutYou": "I Love Kim Soo Hyun",
-      "age": 42,
-      "agreetc": true,
-      "dob": "1824-02-01",
-      "email": "seller@gmail.com",
+      "dob": "2003-01-01",
+      "email": "admin1@mailinator.com",
       "gender": "Male",
       "address": {
         "id": 0,
-        "addLine1": "Korea",
-        "addLine2": "Soul",
-        "state": "",
-        "zipCode": ""
+        "addLine1": "Optio aut sed sunt ",
+        "addLine2": "Quibusdam autem volu",
+        "city": "Vitae duis nisi ea o",
+        "state": "Up 5",
+        "zipCode": 1422222217
       },
       "language": "1 ",
-      "mobNumber": "09-123456789",
-      "name": "Kim Soo Hyun",
-      "password": "12345678",
-      "uploadPhoto": "C:\\fakepath\\images (1).jpg",
-      "role": "seller"
+      "mobNumber": "+1 (863) 663-8989",
+      "name": "Ipsum culpa quo qui",
+      "password": "123456",
+      "uploadPhoto": "C:\\fakepath\\Screenshot (4).png",
+      "role": "admin",
+      "id": "cac0"
     },
     {
-      "id": "818b",
-      "aboutYou": "nani",
-      "age": 24,
+      "id": "1a62",
+      "aboutYou": "Itaque rerum ut ut e",
+      "age": 10,
       "agreetc": true,
-      "dob": "2024-02-21",
-      "email": "buyer@gmail.com",
+      "dob": "1977-08-22",
+      "email": "admin@mailinator.com",
+      "gender": "Female",
+      "address": {
+        "id": 0,
+        "addLine1": "Excepturi non volupt",
+        "addLine2": "Maxime error modi qu",
+        "city": "Nesciunt vero sunt",
+        "state": "Up 7",
+        "zipCode": 39
+      },
+      "language": "3",
+      "mobNumber": "+1 (232) 703-9149",
+      "name": "Dolor nostrum necess",
+      "password": "123456",
+      "uploadPhoto": "C:\\fakepath\\Screenshot (2).png",
+      "role": "admin"
+    },
+    {
+      "id": "62d6",
+      "aboutYou": "Est exercitationem e",
+      "age": 65,
+      "agreetc": true,
+      "dob": "2012-04-13",
+      "email": "sell@mailinator.com",
       "gender": "Male",
       "address": {
         "id": 0,
-        "addLine1": "Yangon",
-        "addLine2": "sd",
-        "state": "Choose...",
-        "zipCode": ""
+        "addLine1": "Nisi molestiae culpa",
+        "addLine2": "In nostrud odio temp",
+        "city": "Totam fugit odit of",
+        "state": "Up 7",
+        "zipCode": 38
+      },
+      "language": "3",
+      "mobNumber": "+1 (861) 336-7406",
+      "name": "Ut et atque sed mole",
+      "password": "123456",
+      "uploadPhoto": "C:\\fakepath\\Screenshot (42).png",
+      "role": "seller"
+    },
+    {
+      "id": "1d65",
+      "aboutYou": "Vel eaque facilis cu",
+      "age": 28,
+      "agreetc": true,
+      "dob": "2009-03-25",
+      "email": "voquqew@mailinator.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "Repellendus Facere ",
+        "addLine2": "Possimus velit sunt",
+        "city": "Velit quidem earum d",
+        "state": "Up 3",
+        "zipCode": 75
       },
       "language": "2",
-      "mobNumber": "09750244049",
-      "name": "Myat Kaung Khant",
-      "password": "12345678",
-      "uploadPhoto": "C:\\fakepath\\images.jpg",
+      "mobNumber": "+1 (538) 443-5045",
+      "name": "Dolor dolor aliquip ",
+      "password": "Pa$$w0rd!",
+      "uploadPhoto": "C:\\fakepath\\Screenshot (1).png",
+      "role": "buyer"
+    },
+    {
+      "id": "71d3",
+      "aboutYou": "Sunt animi odit und",
+      "age": 42,
+      "agreetc": true,
+      "dob": "2014-11-10",
+      "email": "buyer@mailinator.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "Quae odio maiores se",
+        "addLine2": "Et perspiciatis est",
+        "city": "Commodo et ratione d",
+        "state": "Up 6",
+        "zipCode": 96
+      },
+      "language": "3",
+      "mobNumber": "+1 (426) 294-1056",
+      "name": "Corrupti est omnis ",
+      "password": "123456",
+      "uploadPhoto": "C:\\fakepath\\Screenshot (3).png",
       "role": "buyer"
     }
   ],
@@ -163,7 +184,7 @@
   "orders": [
     {
       "id": "1",
-      "userId": "1",
+      "userId": null,
       "sellerId": "2",
       "product": {
         "id": "1",
@@ -178,7 +199,7 @@
         "id": "1",
         "addLine1": "tg",
         "addLine2": "sg",
-        "ciry": "sg",
+        "city": "sg",
         "state": "kachin",
         "zipCode": "110052"
       },
