@@ -9,7 +9,6 @@ import { ApiService } from '../../core/service/api.service';
 })
 export class LoginSignupService {
    public common_url="http://localhost:3000"
-    //public common_url= "https://api.jsonbin.io/v3/b/65d5aaa8dc74654018a7b130/"
   apiService: any;
   constructor(private http:HttpClient,private api:ApiService) { }
   //User Login

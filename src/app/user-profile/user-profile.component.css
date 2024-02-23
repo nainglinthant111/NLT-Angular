@@ -1,0 +1,13 @@
+.profile{
+    justify-content: center;
+    margin-top:-20 ;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-color: black;
+}
+.edit-profile{
+    position:absolute;
+    margin-top: 180px;
+    margin-right:-20px;
+}

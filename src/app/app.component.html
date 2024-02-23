@@ -1,6 +1,12 @@
-
+<!-- 
     <app-header class="sticky-top"></app-header>
     <div class="content">
         <router-outlet />
     </div>
+    <app-footer class="sticky-bottom"></app-footer> -->
+
+    <app-header class="sticky-top"></app-header>
+    <main class="container" [ngStyle]="{'min-height.px':footermaxHeight}">
+<router-outlet></router-outlet>
+    </main>
     <app-footer class="sticky-bottom"></app-footer>

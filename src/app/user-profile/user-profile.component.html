@@ -1,1 +1,123 @@
-<p>user-profile works!</p>
+<div class="jumbotron my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-md-4">
+                <form [formGroup]="userProfileForm" (ngSubmit)="updateProfile(user_id)" >
+                    <div class="form-group mb-3 ms-3" >
+                        <label for="uploadPhoto" class="edit-profile">
+                            <input type="file" id="uploadPhoto" formControlName="uploadPhoto" style="display: none">
+                            <span >
+                                Edit
+                            </span>
+                          </label>
+                          <img [src]="user_profile_pic" alt="" class="profile" >
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Mobile Number
+                        </label>
+                        <input type="tel" class="form-control" formControlName="mobNumber">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Enter Your Age
+                        </label>
+                        <input type="number" class="form-control" formControlName="age">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Enter Your DOB
+                        </label>
+                        <input type="date" class="form-control" formControlName="dob">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="ashish@gmail.com"
+                                formControlName="email">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="password"
+                                formControlName="password">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control" placeholder="12,4 street"
+                                formControlName="addLine1">
+                        </div>
+                        <div class="form-group">
+                            <label>Address 2</label>
+                            <input type="text" class="form-control" placeholder="appartment, floor"
+                                formControlName="addLine2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label>City</label>
+                            <input type="text" class="form-control" placeholder="City" formControlName="city">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>State</label>
+                            <select id="inputState" class="form-control" formControlName="state">
+                                <option selected>Choose...</option>
+                                <option value="Up 1">Up 1</option>
+                                <option value="Up 2">Up 2</option>
+                                <option value="Up 3">Up 3</option>
+                                <option value="Up 4">Up 4</option>
+                                <option value="Up 5">Up 5</option>
+                                <option value="Up 6">Up 6</option>
+                                <option value="Up 7">Up 7</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Zip Code</label>
+                            <input type="number" class="form-control" placeholder="Zip Code"
+                                formControlName="zipCode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Language</label>
+                        <select formControlName="language" class="form-control">
+                            <option value="1 ">English</option>
+                            <option value="2">Myanmar</option>
+                            <option value="3">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label>Gender</label>
+                        <div class="form-check corm-check-inline col-3">
+                            <input type="radio" formControlName="gender" class="form-check-inline" value="Male">
+                            <label class="form-check-inline">Male</label>
+                        </div>
+                        <div class="form-check corm-check-inline col-3">
+                            <input type="radio" formControlName="gender" class="form-check-inline"
+                                value="Female">
+                            <label class="form-check-inline">Female</label>
+                        </div>
+                        <div class="form-check corm-check-inline col-3">
+                            <input type="radio" formControlName="gender" class="form-check-inline"
+                                value="others">
+                            <label class="form-check-inline">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Somthing About you</label>
+                        <textarea name="" class="form-control" id="" rows="3"
+                            formControlName="aboutYou"></textarea>
+                    </div>
+                    <div class="form-group justify-content-center my-4 d-flax">
+                        <button class="btn btn-primary mb-5" >Submit
+                        </button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
