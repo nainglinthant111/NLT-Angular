@@ -1,1 +1,88 @@
-<p>checkout works!</p>
+<br>
+<!-- <h2 class="text-center text-bold">
+    Ypu clicked On Product Id : {{single_product_id}}
+</h2> -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/buyer-dashboard">Buyer</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a>CheckOut</a>
+        </li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header">Product Detail</div>
+            <div class="card-body product-detail">
+                <div class="row">
+                    <div class="col-4">
+                        <!-- <img src="{{individual_product.uploadPhoto}}" class="card-img-top"
+                            alt="{{individual_product.name}}"> -->
+                            <img [src]="individual_product.uploadPhoto" class="card-img-top" [alt]="individual_product.name">
+
+                    </div>
+                    <div class="col-8">
+                        <h4 class="text-bold card-title">
+                            {{individual_product.name}}
+                        </h4>
+                        <p class="card-text product-desc">
+                            {{individual_product.productDesc}}
+                        </p>
+                        <p><span class="float-left"><strong>MRP:</strong><del>
+                                    {{individual_product.mrp}}
+                                </del>
+                            </span>&nbsp;
+                            <span class="float-right">
+                                <strong>
+                                    Dp:
+                                </strong>
+                                {{individual_product.dp}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header">
+                Address Detail
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-bold">
+                    {{user_detail.name}}
+                </h5>
+                <p class="card-text">
+                    {{user_detail.address.addLine1}},{{user_detail.address.addLine2}}
+                </p>
+                <p class="card-text">
+                    {{user_address.city}}
+                </p>
+                <p class="card-text">
+                    {{user_address.state}}
+                </p>
+                <p class="card-text">
+                    Posital Code : {{user_address.zipCode}}
+                </p>
+                <p class="card-text">
+                    Contact No : {{user_contact_no}}
+                </p>
+                <a (click)="placeOrder(user_id)" class="btn btn-primary">
+                    Deliver Here
+                </a>
+                <div class="alert alert-info mt-2" role="alert">
+                    <strong>Note:</strong>
+                    we are not gaving multiple address adition,if you went to deliver in different address for now
+                    change
+                    the address in <span routerLink="/my-profile" class="text-info sim-pointer">My Profile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

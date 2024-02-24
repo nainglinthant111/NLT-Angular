@@ -23,8 +23,6 @@ export class BuyerDashboardComponent implements OnInit {
   getAllProduct(){
     this.customerService.allProduct().subscribe(data=>{
       this.all_products=data;
-      console.log("All Product",this.all_products);
-      
     },error=>{
       console.log("my error",error);
       

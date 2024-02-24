@@ -1,0 +1,94 @@
+#notfound {
+    position: relative;
+    height: 79vh;
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.notfound{
+    max-width:auto;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.notfound .notfound-404{
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform:  translateX(-50%);
+    transform:  translateX(-50%);
+    z-index: -1;
+}
+.notfound .notfound-404 h1{
+    font-family: 'Maven Pro','sans-serif';
+    font-size: 46px;
+    font-weight: 900;
+    color: rgb(224, 215, 215);
+    text-transform: uppercase;
+    margin: 0px;
+    position: absolute;
+    left:50%;
+    top: -20%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.notfound h2{
+    font-family: 'Maven Pro','sans-serif';
+    font-size: 46px;
+    color: rgb(20, 19, 19);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0px;
+
+}
+.notfound p{
+    font-family: 'Maven Pro','sans-serif';
+    font-size: 16px;
+    color: rgb(26, 24, 24);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.notfound a{
+    font-family: 'Maven Pro','sans-serif';
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: aqua;
+    display:inline-block;
+    padding: 16px 38px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: aliceblue;
+    font-weight: 400;
+    -webkit-transition:0.2s all ;
+    transition: 0.2s all;
+}
+
+.notfound a:hover{
+    background-color: aliceblue;
+    border-color: blue;
+    cursor:pointer;
+    color: blue;
+}
+
+@media only screen and (max-width:480px){
+    .notfound .notfound-404 h1{
+        font-size: 162px;
+    }
+    .notfound h2{
+        font-size: 26px;
+    }
+}

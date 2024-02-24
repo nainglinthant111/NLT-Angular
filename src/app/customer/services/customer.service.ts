@@ -7,36 +7,36 @@ import { ApiService } from '../../core/service/api.service';
   providedIn: 'root'
 })
 export class CustomerService {
-  private single_product_id=new BehaviorSubject(null);
-  currentProduct=this.single_product_id.asObservable();
- public common_url="http://localhost:3000";
+  private single_product_id = new BehaviorSubject(null);
+  currentProduct = this.single_product_id.asObservable();
+  public common_url = "http://localhost:3000";
 
-  constructor(private apiService:ApiService,private http:HttpClient) { }
+  constructor(private apiService: ApiService, private http: HttpClient) { }
 
-  allProduct():Observable<any>{
-    return this.apiService.get(this.common_url+"/products");
+  allProduct(): Observable<any> {
+    return this.apiService.get(this.common_url + "/products");
   }
 
-  quickByproduct(product_id:any){
-this.single_product_id.next(product_id);
+  quickByproduct(product_id: any) {
+    this.single_product_id.next(product_id);
   }
 
-  individualProduct(id:any){
-    return this.apiService.get(this.common_url+"/products/"+id);
+  individualProduct(id: any) {
+    return this.apiService.get(this.common_url + "/products/" + id);
   }
 
-  userDetail(id:any){
-    return this.apiService.get(this.common_url+"/user/"+id);
+  userDetail(id: any) {
+    return this.apiService.get(this.common_url + "/user/" + id);
   }
 
-  insertNewOrder(order_dto:any):Observable<any>{
-    return this.http.post(this.common_url+"/orders",order_dto);
+  insertNewOrder(order_dto: any): Observable<any> {
+    return this.http.post(this.common_url + "/orders", order_dto);
   }
-  orderDashboardData():Observable<any>{
-    return this.apiService.get(this.common_url+"/orders");
+  orderDashboardData(): Observable<any> {
+    return this.apiService.get(this.common_url + "/orders");
   }
 
-  productDashboardData():Observable<any>{
-    return this.apiService.get(this.common_url+"/ptoducts");
+  productDashboardData(): Observable<any> {
+    return this.apiService.get(this.common_url + "/products");
   }
 }

@@ -165,9 +165,9 @@
                                 <span *ngIf="edit_user">
                                 <span>Upload image</span><br>
                                 <span>{{upload_file_name}}</span>
-                                <a href="">Preview</a>
+                                <a href="{{upload_file_name}}">Preview</a>
                                 </span>
-                                <input type="file" class="form-control" formControlName="uploadPhoto">
+                                <input type="url" class="form-control" formControlName="uploadPhoto">
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" class="form-check-inline" formControlName="agreetc">
