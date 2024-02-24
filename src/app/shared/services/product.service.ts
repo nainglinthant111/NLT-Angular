@@ -7,7 +7,7 @@ import { ApiService } from '../../core/service/api.service';
   providedIn: 'root'
 })
 export class ProductService {
- public common_url="http://localhost:3000"
+ public common_url="https://json-eco.onrender.com"
   constructor(private http:HttpClient,private apiService:ApiService) { }
 
   allProduct():Observable<any>{

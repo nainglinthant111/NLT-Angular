@@ -11,7 +11,7 @@ export class UserService {
   getUserData(user_id: any) {
     throw new Error('Method not implemented.');
   }
-  public common_url="http://localhost:3000"
+  public common_url="https://json-eco.onrender.com"
   constructor(private http:HttpClient, private router:Router, private apiService:ApiService) { }
 
 //get invidual user

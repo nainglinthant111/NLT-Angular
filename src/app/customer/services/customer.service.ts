@@ -9,7 +9,7 @@ import { ApiService } from '../../core/service/api.service';
 export class CustomerService {
   private single_product_id = new BehaviorSubject(null);
   currentProduct = this.single_product_id.asObservable();
-  public common_url = "http://localhost:3000";
+  public common_url = "https://json-eco.onrender.com";
 
   constructor(private apiService: ApiService, private http: HttpClient) { }
 

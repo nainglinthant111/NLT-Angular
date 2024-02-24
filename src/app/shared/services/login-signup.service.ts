@@ -8,7 +8,7 @@ import { ApiService } from '../../core/service/api.service';
   providedIn: 'root'
 })
 export class LoginSignupService {
-   public common_url="http://localhost:3000"
+   public common_url="https://json-eco.onrender.com"
   apiService: any;
   constructor(private http:HttpClient,private api:ApiService) { }
   //User Login

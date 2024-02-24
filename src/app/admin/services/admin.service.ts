@@ -8,7 +8,8 @@ import { ApiService } from '../../core/service/api.service';
   providedIn: 'root'
 })
 export class AdminService {
-  public common_url="http://localhost:3000";
+  public common_url="https://json-eco.onrender.com";
+
   constructor(private apiService:ApiService,private http:HttpClient) { }
 
   userDashboardData(){
